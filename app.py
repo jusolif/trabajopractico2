@@ -15,7 +15,7 @@ if modulo == "Home":
   st.markdown("Especialización en Python for Analytics")
   st.write("2026")
   st.write("Este proyecto está basado en el archivo BankMarketing.csv, correspondiente a una institución financiera que buscan entender los factores que influyen en la aceptación de sus campañas de marketing.")
-  st.write("Para este trabajo se usaron tecnologías como Python, Pandas y Streamlit")
+  st.write("Para este trabajo se usaron tecnologías como Python, Pandas, Numpy, Streamlit, etc")
 
 elif modulo == "Carga del dataset":
 
@@ -28,7 +28,30 @@ elif modulo == "Carga del dataset":
 
     if archivo is not None:
 
-        df = pd.read_csv(archivo)
+      df = pd.read_csv(archivo)
+
+      st.session_state["df"] = df
+
+      st.success("Archivo cargado correctamente.")
+
+      st.subheader("Vista previa del dataset")
+      st.dataframe(df.head())
+
+      filas, columnas = df.shape
+
+      st.subheader("Dimensiones del dataset")
+
+      col1, col2 = st.columns(2)
+
+      with col1:
+        st.metric("Filas", filas)
+
+      with col2:
+        st.metric("Columnas", columnas)
+
+    else:
+
+        st.warning("Debe cargar el archivo BankMarketing.csv para continuar.")
 
         st.success("Archivo cargado correctamente.")
 
