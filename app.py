@@ -13,7 +13,7 @@ if modulo == "Home":
   st.write("Para este trabajo se usaron tecnologías como Python, Pandas y Streamlit")
 
 
-elif opcion == "Carga del dataset":
+elif modulo == "Carga del dataset":
 
     st.title("Carga del dataset")
 
