@@ -1,5 +1,5 @@
 import streamlit as st
-
+import pandas as pd
 modulo = st.sidebar.selectbox("Seleccione una sección:",["Home","Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
 
 if modulo == "Home":
