@@ -35,6 +35,8 @@ elif modulo == "Carga del dataset":
 
         df = pd.read_csv(archivo)
 
+        st.session_state["df"] = df
+
         st.success("Archivo cargado correctamente.")
 
         st.subheader("Vista previa del dataset")
@@ -45,8 +47,13 @@ elif modulo == "Carga del dataset":
 
         st.subheader("Dimensiones del dataset")
 
-        st.write(f"Filas: {filas}")
-        st.write(f"Columnas: {columnas}")
+        col1, col2 = st.columns(2)
+
+        with col1:
+            st.metric("Filas", filas)
+
+        with col2:
+            st.metric("Columnas", columnas)
 
     else:
 
