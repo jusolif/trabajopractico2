@@ -14,7 +14,7 @@ if modulo == "Home":
   st.subheader("Julio Humberto Solis Flores")
   st.markdown("Especialización en Python for Analytics")
   st.write("2026")
-  st.write("Este proyecto está basado en el archivo BankMarketing.csv, correspondiente a una institución financiera que buscan entender los factores que influyen en la aceptación de sus campañas de marketing.")
+  st.write("Este proyecto está basado en el archivo BankMarketing.csv, correspondiente a una institución")
   st.write("Para este trabajo se usaron tecnologías como Python, Pandas, Numpy, Streamlit, etc")
 
 elif modulo == "Carga del dataset":
