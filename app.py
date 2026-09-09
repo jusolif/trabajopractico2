@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from io import StringIO
 
-modulo = st.sidebar.selectbox("Seleccione una sección:",["Home","Carga del dataset","EDA"])
+modulo = st.sidebar.selectbox("Seleccione una sección:",["Home","Carga del dataset"])
 
 if modulo == "Home":
   st.title("Primer Proyecto de Portafolio Profesional")
