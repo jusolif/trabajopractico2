@@ -12,10 +12,9 @@ if modulo == "Home":
   st.write("Este proyecto está basado en el archivo BankMarketing.csv, correspondiente a una institución financiera que buscan entender los factores que influyen en la aceptación de sus campañas de marketing.")
   st.write("Para este trabajo se usaron tecnologías como Python, Pandas y Streamlit")
 
-
 elif modulo == "Carga del dataset":
-  
-  st.header("Carga del dataset")
+
+    st.header("Carga del dataset")
 
     st.markdown("""
     En este módulo se realiza la carga del archivo BankMarketing.csv
@@ -43,6 +42,10 @@ elif modulo == "Carga del dataset":
 
         st.write(f"Filas: {filas}")
         st.write(f"Columnas: {columnas}")
+
+    else:
+
+        st.warning("Debe cargar el archivo BankMarketing.csv para continuar.")
 
     else:
 
