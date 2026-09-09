@@ -1,5 +1,10 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from io import StringIO
+
 modulo = st.sidebar.selectbox("Seleccione una sección:",["Home","Carga del dataset","EDA"])
 
 if modulo == "Home":
