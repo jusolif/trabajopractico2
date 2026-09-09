@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 import seaborn as sns
 from io import StringIO
 
@@ -24,7 +25,3 @@ elif modulo == "Carga del dataset":
     para posteriormente efectuar el Análisis Exploratorio de Datos (EDA).""")
 
     archivo = st.file_uploader("Seleccione el archivo BankMarketing.csv",type=["csv"])
-
-    if archivo is not None:
-
-      df = pd.read_csv(archivo)
