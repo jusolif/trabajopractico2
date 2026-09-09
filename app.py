@@ -8,14 +8,14 @@ from io import StringIO
 modulo = st.sidebar.selectbox("Seleccione una sección:",["Home","Carga del dataset"])
 
 if modulo == "Home":
-  st.title("Primer Proyecto de Portafolio Profesional")
-  st.image("DMC.png",width=150)
-  st.image("Python_logo.png",width=300)
-  st.subheader("Julio Humberto Solis Flores")
-  st.markdown("Especialización en Python for Analytics")
-  st.write("2026")
-  st.write("Este proyecto está basado en el archivo BankMarketing.csv, correspondiente a una institución")
-  st.write("Para este trabajo se usaron tecnologías como Python, Pandas, Numpy, Streamlit, etc")
+    st.title("Primer Proyecto de Portafolio Profesional")
+    st.image("DMC.png",width=150)
+    st.image("Python_logo.png",width=300)
+    st.subheader("Julio Humberto Solis Flores")
+    st.markdown("Especialización en Python for Analytics")
+    st.write("2026")
+    st.write("Este proyecto está basado en el archivo BankMarketing.csv, correspondiente a una institución")
+    st.write("Para este trabajo se usaron tecnologías como Python, Pandas, Numpy, Streamlit, etc")
 
 elif modulo == "Carga del dataset":
 
