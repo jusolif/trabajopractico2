@@ -24,13 +24,10 @@ elif modulo == "Carga del dataset":
         type=["csv"])
 
     if archivo is None:
-
         st.warning("Por favor, carga el archivo BankMarketing.csv ""para continuar.")
 
     else:
-
         try:
-
             df = pd.read_csv(archivo)
 
             st.success("Dataset cargado correctamente.")
@@ -52,7 +49,5 @@ elif modulo == "Carga del dataset":
             st.dataframe(df.head())
 
         except Exception as e:
-
-            st.error(
-                f"No fue posible cargar el archivo: {e}")
+            st.error(f"No fue posible cargar el archivo: {e}")
 
