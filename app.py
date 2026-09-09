@@ -16,23 +16,16 @@ if modulo == "Home":
 elif modulo == "Carga del dataset":
 
     st.title("Carga del dataset")
-
-    st.write(
-        "Carga el archivo BankMarketing.csv para comenzar "
-        "el análisis exploratorio de datos."
-    )
+    st.write("Carga el archivo BankMarketing.csv para comenzar "
+        "el análisis exploratorio de datos.")
 
     archivo = st.file_uploader(
         "Selecciona el archivo CSV",
-        type=["csv"]
-    )
+        type=["csv"])
 
     if archivo is None:
 
-        st.warning(
-            "Por favor, carga el archivo BankMarketing.csv "
-            "para continuar."
-        )
+        st.warning("Por favor, carga el archivo BankMarketing.csv ""para continuar.")
 
     else:
 
@@ -61,6 +54,5 @@ elif modulo == "Carga del dataset":
         except Exception as e:
 
             st.error(
-                f"No fue posible cargar el archivo: {e}"
-            )
+                f"No fue posible cargar el archivo: {e}")
 
