@@ -1,4 +1,7 @@
 import streamlit as st
+
+modulo = st.sidebar.selectbox("Seleccione una sección:",["Home","Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
+
 if modulo == "Home":
   st.title("Proyecto Aplicado en Streamlit – Fundamentos de Programación ")
   st.image("DMC.png",width=150)
