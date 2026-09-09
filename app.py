@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-modulo = st.sidebar.selectbox("Seleccione una sección:",["Home","Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
+modulo = st.sidebar.selectbox("Seleccione una sección:",["Home","Carga del dataset","EDA"])
 
 if modulo == "Home":
   st.title("Primer Proyecto de Portafolio Profesional")
