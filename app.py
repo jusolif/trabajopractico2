@@ -26,7 +26,7 @@ elif modulo == "Carga del dataset":
 
     archivo = st.file_uploader("Seleccione el archivo BankMarketing.csv",type=["csv"])
 
-if archivo is not None:
+  if archivo is not None:
 
     df = pd.read_csv(archivo)
 
@@ -49,7 +49,7 @@ if archivo is not None:
     with col2:
         st.metric("Columnas", columnas)
 
-else:
+  else:
 
     st.warning(
         "Debe cargar el archivo BankMarketing.csv para continuar."
