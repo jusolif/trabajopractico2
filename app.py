@@ -14,40 +14,37 @@ if modulo == "Home":
 
 
 elif modulo == "Carga del dataset":
+  
+  st.header("Carga del dataset")
 
-    st.title("Carga del dataset")
-    st.write("Carga el archivo BankMarketing.csv para comenzar "
-        "el análisis exploratorio de datos.")
+    st.markdown("""
+    En este módulo se realiza la carga del archivo BankMarketing.csv
+    para posteriormente efectuar el Análisis Exploratorio de Datos (EDA).
+    """)
 
     archivo = st.file_uploader(
-        "Selecciona el archivo CSV",
-        type=["csv"])
+        "Seleccione el archivo BankMarketing.csv",
+        type=["csv"]
+    )
 
-    if archivo is None:
-        st.warning("Por favor, carga el archivo BankMarketing.csv ""para continuar.")
+    if archivo is not None:
+
+        df = pd.read_csv(archivo)
+
+        st.success("Archivo cargado correctamente.")
+
+        st.subheader("Vista previa del dataset")
+
+        st.dataframe(df.head())
+
+        filas, columnas = df.shape
+
+        st.subheader("Dimensiones del dataset")
+
+        st.write(f"Filas: {filas}")
+        st.write(f"Columnas: {columnas}")
 
     else:
-        try:
-            df = pd.read_csv(archivo)
 
-            st.success("Dataset cargado correctamente.")
-
-            # Dimensiones
-            filas, columnas = df.shape
-
-            col1, col2 = st.columns(2)
-
-            with col1:
-                st.metric("Número de filas", filas)
-
-            with col2:
-                st.metric("Número de columnas", columnas)
-
-            # Vista previa
-            st.subheader("Vista previa del dataset")
-
-            st.dataframe(df.head())
-
-        except Exception as e:
-            st.error(f"No fue posible cargar el archivo: {e}")
+        st.warning("Debe cargar el archivo BankMarketing.csv para continuar.")
 
