@@ -16,23 +16,33 @@ elif modulo == "Carga del dataset":
 
     st.header("Carga del dataset")
 
-    st.markdown("""En este módulo se realiza la carga del archivo BankMarketing.csv
-    para posteriormente efectuar el Análisis Exploratorio de Datos (EDA).""")
+    st.markdown("""
+    En este módulo se realiza la carga del archivo BankMarketing.csv
+    para posteriormente efectuar el Análisis Exploratorio de Datos (EDA).
+    """)
 
-    archivo = st.file_uploader("Seleccione el archivo BankMarketing.csv",
-        type=["csv"])
+    archivo = st.file_uploader(
+        "Seleccione el archivo BankMarketing.csv",
+        type=["csv"]
+    )
 
-    
-  if archivo is not None:
+    if archivo is not None:
+
         df = pd.read_csv(archivo)
+
         st.success("Archivo cargado correctamente.")
+
         st.subheader("Vista previa del dataset")
+
         st.dataframe(df.head())
+
         filas, columnas = df.shape
+
         st.subheader("Dimensiones del dataset")
+
         st.write(f"Filas: {filas}")
         st.write(f"Columnas: {columnas}")
 
     else:
-        st.warning("Debe cargar el archivo BankMarketing.csv para continuar.")
 
+        st.warning("Debe cargar el archivo BankMarketing.csv para continuar.")
