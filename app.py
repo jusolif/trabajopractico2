@@ -26,31 +26,30 @@ elif modulo == "Carga del dataset":
 
     archivo = st.file_uploader("Seleccione el archivo BankMarketing.csv",type=["csv"])
 
-  if archivo is not None:
+    if archivo is not None:
 
-    df = pd.read_csv(archivo)
+      df = pd.read_csv(archivo)
 
-    st.session_state["df"] = df
+      st.session_state["df"] = df
 
-    st.success("Archivo cargado correctamente.")
+      st.success("Archivo cargado correctamente.")
 
-    st.subheader("Vista previa del dataset")
-    st.dataframe(df.head())
+      st.subheader("Vista previa del dataset")
+      st.dataframe(df.head())
 
-    filas, columnas = df.shape
+      filas, columnas = df.shape
 
-    st.subheader("Dimensiones del dataset")
+      st.subheader("Dimensiones del dataset")
 
-    col1, col2 = st.columns(2)
+      col1, col2 = st.columns(2)
 
-    with col1:
-        st.metric("Filas", filas)
+      with col1:
+          st.metric("Filas", filas)
 
-    with col2:
-        st.metric("Columnas", columnas)
+      with col2:
+          st.metric("Columnas", columnas)
 
-  else:
+    else:
 
-    st.warning(
-        "Debe cargar el archivo BankMarketing.csv para continuar."
-    )    
+      st.warning(
+        "Debe cargar el archivo BankMarketing.csv para continuar.")    
