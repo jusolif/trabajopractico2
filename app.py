@@ -47,7 +47,3 @@ elif modulo == "Carga del dataset":
 
         st.warning("Debe cargar el archivo BankMarketing.csv para continuar.")
 
-    else:
-
-        st.warning("Debe cargar el archivo BankMarketing.csv para continuar.")
-
