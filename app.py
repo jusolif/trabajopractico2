@@ -19,8 +19,7 @@ elif modulo == "Carga del dataset":
     st.markdown("""En este módulo se realiza la carga del archivo BankMarketing.csv
     para posteriormente efectuar el Análisis Exploratorio de Datos (EDA).""")
 
-    archivo = st.file_uploader("Seleccione el archivo BankMarketing.csv",
-        type=["csv"])
+    archivo = st.file_uploader("Seleccione el archivo BankMarketing.csv",type=["csv"])
 
     if archivo is not None:
 
