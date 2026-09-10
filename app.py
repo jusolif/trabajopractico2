@@ -5,6 +5,40 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from io import StringIO
 
+class DataAnalyzer:
+
+    def __init__(self, df):
+        self.df = df
+
+    def informacion_general(self):
+        buffer = StringIO()
+        self.df.info(buf=buffer)
+        return buffer.getvalue()
+
+    def clasificar_variables(self):
+        numericas = self.df.select_dtypes(
+            include=np.number
+        ).columns.tolist()
+
+        categoricas = self.df.select_dtypes(
+            exclude=np.number
+        ).columns.tolist()
+
+        return numericas, categoricas
+
+    def estadisticas_descriptivas(self):
+        return self.df.describe()
+
+    def valores_nulos(self):
+        return self.df.isnull().sum()
+
+    def porcentajes_nulos(self):
+        return (
+            self.df.isnull().sum()
+            / len(self.df)
+            * 100
+        )
+
 modulo = st.sidebar.selectbox("Seleccione una sección:",["Home","Carga del dataset","Módulo 3: Análisis Exploratorio de Datos"])
 
 if modulo == "Home":
