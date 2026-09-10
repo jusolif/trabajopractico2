@@ -67,7 +67,7 @@ elif modulo == "Carga del dataset":
 
     if archivo is not None:
 
-        df = pd.read_csv(archivo)
+        df = pd.read_csv(archivo, sep=';')
 
         st.session_state["df"] = df
 
